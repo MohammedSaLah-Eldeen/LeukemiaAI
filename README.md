@@ -1,2 +1,4 @@
 # LeukemiaAI
-Leukemia AI , a fully functional Machine Learning Pipeline to detect Leukemia cells.
+
+## Data
+the Leukemia Classification dataset hosted on <a href="https://www.kaggle.com/datasets/andrewmvd/leukemia-classification">kaggle</a> was used for training
