@@ -1,32 +1,32 @@
 """
 Auto project file structure creator.
 """
-import os 
+import os
 from pathlib import Path
 import logging
 
 # logging
-logging.basicConfig(level=logging.DEBUG, format='[%(asctime)s]: %(message)s')
+logging.basicConfig(level=logging.DEBUG, format="[%(asctime)s]: %(message)s")
 
 PROJECT_NAME = "LeukemiaAI"
 
 FILES_PATHS = [
     ".github/workflows/.gitkeep",
-    f"src/{PROJECT_NAME}/__init__.py",
-    f"src/{PROJECT_NAME}/components/__init__.py",
-    f"src/{PROJECT_NAME}/utils/__init__.py",
-    f"src/{PROJECT_NAME}/config/__init__.py",
-    f"src/{PROJECT_NAME}/config/configuration.py",
-    f"src/{PROJECT_NAME}/pipeline/__init__.py",
-    f"src/{PROJECT_NAME}/entity/__init__.py",
-    f"src/{PROJECT_NAME}/constants/__init__.py",
+    f"{PROJECT_NAME}/__init__.py",
+    f"{PROJECT_NAME}/components/__init__.py",
+    f"{PROJECT_NAME}/utils/__init__.py",
+    f"{PROJECT_NAME}/config/__init__.py",
+    f"{PROJECT_NAME}/config/configuration.py",
+    f"{PROJECT_NAME}/pipeline/__init__.py",
+    f"{PROJECT_NAME}/entity/__init__.py",
+    f"{PROJECT_NAME}/constants/__init__.py",
     "config/config.yml",
     "dvc.yml",
     "params.yml",
     "requirements.txt",
     "requirements.dev.txt",
-    "setup.py",
-    "research/trials.ipynb"
+    "research/trials.ipynb",
+    "templates/index.html",
 ]
 
 # creating files.
@@ -38,9 +38,8 @@ for f_path in FILES_PATHS:
         logging.info(f"created dir: [{f_dir}]")
 
     if not os.path.exists(f_path):
-        with open(f_path, 'w') as f:
+        with open(f_path, "w") as f:
             logging.info(f"created file [{f_name}]")
-        
+
     else:
         logging.info(f"[{f_name}], already created !")
-
