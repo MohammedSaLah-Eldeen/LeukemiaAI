@@ -15,3 +15,17 @@ types-PyYAML
 scipy
 Flask
 Flask-Cors
+transformers
+datasets
+matplotlib
+seaborn
+pandas
+numpy
+keras
+opencv-python
+scikit-learn
+kaggle
+python-dotenv
+reusables
+huggingface-hub
+ipywidgets

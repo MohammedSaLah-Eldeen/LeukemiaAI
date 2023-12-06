@@ -1,0 +1,8 @@
+research_root: research
+
+research_data:
+  root_dir: data
+  source_URL: andrewmvd/leukemia-classification
+  local_data_file: data/leukemia-classification.zip
+  unzip_dir: data/data
+  kaggle: True
