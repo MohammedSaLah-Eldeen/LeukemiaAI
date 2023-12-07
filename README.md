@@ -1,4 +1,4 @@
-<img src="../demo/LuekemiaAI.png" alt="LuekemiaAI" style="width: 250px;">
+<img src="demo/LuekemiaAI.png" alt="LuekemiaAI" style="width: 250px;">
 
 # **LeukemiaAI**
 
