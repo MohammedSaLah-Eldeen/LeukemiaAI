@@ -6,3 +6,9 @@ research_data:
   local_data_file: data/leukemia-classification.zip
   unzip_dir: data/data
   kaggle: True
+
+model:
+  root_dir: model
+  huggingface_repo: https://huggingface.co/SuperMaker/vit-base-patch16-224-in21k-leukemia
+  model_dir: model/vit-base-patch16-224-in21k-leukemia
+

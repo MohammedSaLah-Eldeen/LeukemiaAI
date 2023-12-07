@@ -1,1 +1,9 @@
-EmptyKey: EmptyValue
+MODEL_CHECK_POINT: google/vit-base-patch16-224-in21k
+BATCH_SIZE: 64
+EPOCHS: 14
+INITIAL_LEARNING_RATE: 0.001
+FP16: True
+HUB_MODEL_ID: https://huggingface.co/SuperMaker/vit-base-patch16-224-in21k-leukemia
+LABEL2ID:
+  hem: 0
+  all: 1

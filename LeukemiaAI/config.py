@@ -24,13 +24,25 @@ class DataIngestionConfig:
     kaggle: bool
 
 
+@dataclass(frozen=True)
+class FinetunedModelConfig:
+    """Configuration settings for the fine-tuned model."""
+    root_dir: Path
+    huggingface_repo: str
+    model_dir: Path
+
+
 class ConfigurationManager:
     """manages configuration of all modules."""
     def __init__(self, config_filepath: Path, params_filepath: Path):
 
         self.config = tools.loadyaml(config_filepath)
         self.params = tools.loadyaml(params_filepath)
-        tools.createdirs([self.config.research_data.root_dir])
+
+        dirs = []
+        dirs.append(self.config.research_data.root_dir)
+        dirs.append(self.config.model.root_dir)
+        tools.createdirs(dirs)
 
     def data_ingestion_configs(self) -> DataIngestionConfig:
         """reads `self.config` yml file and returns a config class."""
@@ -44,3 +56,15 @@ class ConfigurationManager:
         )
 
         return diconfig
+    
+    def model_configs(self) -> FinetunedModelConfig:
+        """reads `self.config` yml file and returns a config class."""
+
+        mconfig = FinetunedModelConfig(
+            root_dir=self.config.model.root_dir,
+            huggingface_repo=self.config.model.huggingface_repo,
+            model_dir=self.config.model.model_dir
+        )
+    
+        return mconfig
+
