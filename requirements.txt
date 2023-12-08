@@ -1,6 +1,5 @@
 tensorflow
 torch
-dvc
 notebook
 numpy
 pandas
@@ -29,3 +28,4 @@ python-dotenv
 reusables
 huggingface-hub
 ipywidgets
+gradio
