@@ -13,6 +13,8 @@ to view the Data Card on Kaggle
 Visit This HuggingFace repo: https://huggingface.co/SuperMaker/vit-base-patch16-224-in21k-leukemia <br>
 to view the fine-tuned ViT (Vision Transformer) model and its specifications.
 
+## **Research**
+To understand all about how ViT was finetuned and the hyperparameter selection please see `research/LeukemiaAIResearch`
 
 ## **Demo**
 
